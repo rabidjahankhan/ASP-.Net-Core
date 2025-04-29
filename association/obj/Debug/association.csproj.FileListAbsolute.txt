@@ -1,0 +1,7 @@
+C:\Users\USER\source\repos\association\bin\Debug\association.exe.config
+C:\Users\USER\source\repos\association\bin\Debug\association.exe
+C:\Users\USER\source\repos\association\bin\Debug\association.pdb
+C:\Users\USER\source\repos\association\obj\Debug\association.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\association\obj\Debug\association.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\association\obj\Debug\association.exe
+C:\Users\USER\source\repos\association\obj\Debug\association.pdb
