@@ -1,7 +1,0 @@
-C:\Users\USER\source\repos\MethodOverriding\bin\Debug\MethodOverriding.exe.config
-C:\Users\USER\source\repos\MethodOverriding\bin\Debug\MethodOverriding.exe
-C:\Users\USER\source\repos\MethodOverriding\bin\Debug\MethodOverriding.pdb
-C:\Users\USER\source\repos\MethodOverriding\obj\Debug\MethodOverriding.csproj.AssemblyReference.cache
-C:\Users\USER\source\repos\MethodOverriding\obj\Debug\MethodOverriding.csproj.CoreCompileInputs.cache
-C:\Users\USER\source\repos\MethodOverriding\obj\Debug\MethodOverriding.exe
-C:\Users\USER\source\repos\MethodOverriding\obj\Debug\MethodOverriding.pdb
