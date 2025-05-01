@@ -10,15 +10,16 @@ namespace MethodOverriding
     {
         static void Main(string[] args)
         {
-            SavingAccount sv1 = new SavingAccount();
+            
+            SavingAccount sv1 = new SavingAccount(accountNo:"1212", customerName:"Rabid", interestAmount:1200);
             sv1.InterestRate = 500;
             sv1.AccountNumber = "123456789";
             sv1.CustomerName = "Ishrat Jahan Khan";
             Console.WriteLine(sv1.Deposit(amount: 10000));
             Console.WriteLine(sv1.Withdraw(amount: 5202500));
             Console.WriteLine(sv1.Withdraw(amount: 5000));
-
-            CheckingAccount ca1 = new CheckingAccount();
+            Console.WriteLine();
+            CheckingAccount ca1 = new CheckingAccount(accountNo:"2131", customerName: "Mahi", sarviceCharge:9000);
             ca1.ServiceCharge = 50000;
             ca1.AccountNumber = "123456789";
             ca1.CustomerName = "RAbid Jahan Khan";

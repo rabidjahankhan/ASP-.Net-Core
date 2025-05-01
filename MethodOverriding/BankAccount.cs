@@ -8,6 +8,11 @@ namespace MethodOverriding
 {
     internal class BankAccount
     {
+        public BankAccount(string accountNo, string customerNAme) //constructor
+        { 
+            AccountNumber = accountNo;
+            CustomerName = customerNAme; 
+        }
         public string AccountNumber { get; set; }
         public string CustomerName { get; set; }
         public decimal Balance { get; private set; }

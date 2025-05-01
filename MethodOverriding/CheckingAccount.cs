@@ -8,6 +8,11 @@ namespace MethodOverriding
 {
     internal class CheckingAccount : BankAccount
     {
+        public CheckingAccount(string accountNo, string customerName, double sarviceCharge):base(accountNo, customerName)
+        {
+            ServiceCharge = sarviceCharge;
+        }
+
         public double ServiceCharge { get; set; }
     }
 }
