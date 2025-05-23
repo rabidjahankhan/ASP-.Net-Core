@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterfaceExample
 {
-    public class Department : Iinformation
+    public class Department : Iinformation, IPrinter
     {
         public Department()
         {
@@ -22,6 +22,16 @@ namespace InterfaceExample
         public string GetBasicInformation()
         {
             return $"{Code} {Name}";
+        }
+
+        public void Print()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetIpAddress(string ip)
+        {
+            throw new NotImplementedException();
         }
     }
 }
