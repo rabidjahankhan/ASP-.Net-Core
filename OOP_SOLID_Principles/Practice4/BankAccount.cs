@@ -8,17 +8,23 @@ namespace Practice4
 {
     public class BankAccount
     {
-        public string AccountNumber;
-        public string AccountHolderName;
-        public double Balance;
-    }
+        public string AccountNumber { get; set; }
+        public string AccountName { get; set; }
+        public double Balance { get; private set; }
 
-    public void Diposit(double amount)
+        public BankAccount(string number, string name, double initialBalance)
+        {
+            AccountNumber = number;
+            AccountName = name;
+            Balance = initialBalance;
+        }
+
+        public void Deposit(double amount)
         {
             if (amount > 0)
             {
                 Balance += amount;
-                Console.WriteLine($"Deposited: {amount}. New Balance: {Balance}");
+                Console.WriteLine($"{amount} deposited to {AccountName}. New balance: {Balance}");
             }
             else
             {
@@ -30,32 +36,31 @@ namespace Practice4
             if (amount > 0 && amount <= Balance)
             {
                 Balance -= amount;
-                Console.WriteLine($"Withdrawn: {amount}. New Balance: {Balance}");
-            }
-            else if (amount > Balance)
-            {
-                Console.WriteLine("Insufficient funds for withdrawal.");
+                Console.WriteLine($"{amount} withdrawn from {AccountName}. New balance: {Balance}");
             }
             else
             {
-                Console.WriteLine("Withdrawal amount must be positive.");
+                Console.WriteLine("Invalid withdraw amount or insufficient balance.");
             }
         }
-        public void Transfer(BankAccount targetAccount, double amount)
+        public void Transfer(BankAccount toAccount, double amount)
         {
             if (amount > 0 && amount <= Balance)
             {
-                Withdraw(amount);
-                targetAccount.Diposit(amount);
-                Console.WriteLine($"Transferred: {amount} to {targetAccount.AccountHolderName}. New Balance: {Balance}");
-            }
-            else if (amount > Balance)
-            {
-                Console.WriteLine("Insufficient funds for transfer.");
+                this.Balance -= amount;
+                toAccount.Balance += amount;
+                Console.WriteLine($"{amount} transferred from {AccountName} to {toAccount.AccountName}.");
+                Console.WriteLine($"{AccountName} balance: {Balance}");
+                Console.WriteLine($"{toAccount.AccountName} balance: {toAccount.Balance}");
             }
             else
             {
-                Console.WriteLine("Transfer amount must be positive.");
+                Console.WriteLine("Transfer failed: invalid amount or insufficient balance.");
             }
         }
+        public void ShowInfo()
+        {
+            Console.WriteLine($"Account: {AccountNumber} - {AccountName}, Balance: {Balance}");
+        }
     }
+}
